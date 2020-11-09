@@ -503,10 +503,10 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.0 }
     #define DEFAULT_Kd_LIST { 114.00, 112.0 }
   #else
-    // flsun Q5
-    #define DEFAULT_Kp 12.88
-    #define DEFAULT_Ki 0.72
-    #define DEFAULT_Kd 57.54
+    //flsun Q5 via  M303 E0 S200 C5
+    #define DEFAULT_Kp 16.26
+    #define DEFAULT_Ki 1.06
+    #define DEFAULT_Kd 62.25
   #endif
 #endif // PIDTEMP
 
@@ -544,10 +544,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   // flsun Q5 via M303 E-1 C8 S60
-  #define DEFAULT_bedKp 58.98
-  #define DEFAULT_bedKi 10.82
-  #define DEFAULT_bedKd 214.36
-
+  #define DEFAULT_bedKp 28.30
+  #define DEFAULT_bedKi 5.35
+  #define DEFAULT_bedKd 99.83
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
@@ -813,7 +812,7 @@
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 400 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 428.66 }
 
 /**
  * Default Max Feed Rate (mm/s)
